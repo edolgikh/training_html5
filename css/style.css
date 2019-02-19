@@ -5,18 +5,15 @@ html body {
     padding: 0;
 }
 
-.header {
+.main-header {
     width: 1280px;
     margin: 0 auto;
-}
-
-.main-header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #445162;
 }
 .main-header__right{
+    width: 100%;
     padding: 50px;
 }
 .main-header_name{
@@ -40,7 +37,7 @@ html body {
 }
 .main-header__list li{
     list-style: none;
-    background: url("../images/check_icon.png") no-repeat 0 9px;
+    background: url("../img/check_icon.png") no-repeat 0 9px;
     padding-left: 35px;
 }
 .main-header img {
@@ -293,7 +290,12 @@ details[open] summary:before{
     text-transform: uppercase;
 }
 .buttonbuy:hover {
+    color: white;
     background-color: lightblue;
+}
+.buttonbuy:active{
+    color: blueviolet;
+    background-color: white;
 }
 .footer{
     width: 1280px;
@@ -392,34 +394,18 @@ details[open] summary:before{
     border: 2px solid white;
     background-color: lightblue;
 }
-
+.footer_form input[type="submit"]:active{
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    background-color: white;
+}
 .footer_form{
     margin-right: 50px;
     margin-left: 250px;
 }
 .footer_contact_phone{
     display:flex;
-    margin-bottom: 18px;
-    background: url("../images/phone_icon.png") no-repeat;
-}
-.footer_contact_skype{
-    display:flex;
-    margin-bottom: 18px;
-    background: url("../images/skype_icon.png") no-repeat;
-}
-.footer_contact_icq{
-    display:flex;
-    margin-bottom: 18px;
-    background: url("../images/icq_icon.png") no-repeat;
-}
-.footer_contact_email{
-    display:flex;
-    margin-bottom: 18px;
-    background: url("../images/email_icon.png") no-repeat;
-}
-
-.footer_social_txt{
-    margin: 0 0 0 30px;
+    margin-bottom: 10px;
     font-family: Arial;
     color:  #ffffff;
     font-size: 16px;
@@ -427,10 +413,97 @@ details[open] summary:before{
     line-height: 30px;
     text-align: left;
 }
+.footer_contact_phone:before{
+    content: url("../img/phone_icon.png");
+    margin-right: 10px;
+}
+.footer_contact_skype{
+    display:flex;
+    margin-bottom: 10px;
+    font-family: Arial;
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+.footer_contact_skype:before{
+    content: url("../img/skype_icon.png");
+    margin-right: 10px;
+}
+.footer_contact_icq{
+    display:flex;
+    margin-bottom: 10px;
+    font-family: Arial;
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+.footer_contact_icq:before{
+    content: url("../img/icq_icon.png");
+    margin-right: 10px;
+}
+.footer_contact_email{
+    display:flex;
+    margin-bottom: 10px;
+    font-family: Arial;
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+.footer_contact_email:before{
+    content: url("../img/email_icon.png");
+    margin-right: 10px;
+    background: url("../img/social_buttons.png") 0 0 no-repeat;
+}
+
 .footer_network{
-    display: block;
-    width: 240px;
-    height: 42px;
-    margin-top: 22px;
-    background: url("../images/social_buttons.png") no-repeat;
+    width: 250px;
+    list-style-type: none;
+}
+
+.footer_network_tw::before {
+    content: "";
+    float: left;
+    width: 48px;
+    height: 45px;
+    background: url("../img/social_buttons.png") 0 0 no-repeat;
+    margin-right: 2px;
+}
+.footer_network_fb::before {
+    content: "";
+    float: left;
+    width: 48px;
+    height: 45px;
+    background: url("../img/social_buttons.png") -48px 0 no-repeat;
+    margin-right: 2px;
+}
+.footer_network_in::before {
+    content: "";
+    float: left;
+    width: 48px;
+    height: 45px;
+    background: url("../img/social_buttons.png") -96px 0 no-repeat;
+    margin-right: 2px;
+}
+.footer_network_gm::before {
+    content: "";
+    float: left;
+    width: 48px;
+    height: 45px;
+    background: url("../img/social_buttons.png") -144px 0 no-repeat;
+    margin-right: 2px;
+}
+
+.footer_network_yt::before {
+    content: "";
+    float: left;
+    width: 48px;
+    height: 45px;
+    background: url("../img/social_buttons.png") -192px 0 no-repeat;
+    margin-right: 2px;
 }
